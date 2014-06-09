@@ -95,6 +95,7 @@ public class CXI {
               attr.setAlgo(CryptoServerCXI.KEY_ALGO_RSA);
               attr.setSize(1024);
               attr.setName(nombre);
+              attr.setLabel(nombre);
               if(!grupo.equals(""))
                   attr.setGroup(grupo);
               attr.setExport(CryptoServerCXI.KEY_EXPORT_ALLOW);
