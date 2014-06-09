@@ -8,6 +8,7 @@ package CXI;
 import CryptoServerAPI.CryptoServerException;
 import CryptoServerCXI.CryptoServerCXI;
 import CryptoServerCXI.CryptoServerCXI.KeyAttributes;
+import Log.Log;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
@@ -119,8 +120,9 @@ public class CXI {
 
      public byte[] ObtenerFirma(byte[] data,String nombreLlave,String grupo) throws IOException, NumberFormatException, CryptoServerException {
         byte[] sign=null;
+        Log log = new Log();
         try {
-            // create instance of CryptoServerCXI (opens connection to CryptoServer)
+            log.Write("Buscando la llave: " + nombreLlave);
             KeyAttributes attr = new CryptoServerCXI.KeyAttributes();
             if(!grupo.equals(""))
                 attr.setGroup(grupo);
@@ -133,8 +135,10 @@ public class CXI {
             // RSA sign hash
             int mech = CryptoServerCXI.MECH_HASH_ALGO_SHA1 |CryptoServerCXI.MECH_PAD_PKCS1 ;
             sign = cxi.sign( rsaKey, mech, hash);
+            log.Write("Se firmó correctamente la petición");
 
         } catch (Exception ex) {
+            log.Write("Ocurrió un error al firmar la petición: " + ex.getMessage());
             Logger.getLogger(CXI.class.getName()).log(Level.SEVERE, null, ex);
         }
             return sign;

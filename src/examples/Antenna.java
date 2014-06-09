@@ -402,6 +402,9 @@ public class Antenna extends javax.swing.JFrame {
 
     private void btnConectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConectarActionPerformed
         try {
+            Log.Log log = new Log.Log();
+            log.Write("Mensaje de prueba");
+            
             cxi = new CXI();
             String mensaje =
                     cxi.Conectar(

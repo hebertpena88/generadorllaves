@@ -1,0 +1,25 @@
+
+
+ Sun Jun 08 21:19:08 CDT 2014 - Mensaje de prueba
+
+ Sun Jun 08 21:19:26 CDT 2014 - Obteniendo los datos de confguracion
+
+ Sun Jun 08 21:19:26 CDT 2014 - SAT970701NN3
+
+ Sun Jun 08 21:19:26 CDT 2014 - GASM690101H29
+
+ Sun Jun 08 21:19:26 CDT 2014 - GASM690101HDFRNN09
+
+ Sun Jun 08 21:19:26 CDT 2014 - SERVICIO DE ADMINISTRACION TRIBUTARIA
+
+ Sun Jun 08 21:19:27 CDT 2014 - Ruta de salida: C:\Users\Admin\Documents\Documentos\asdasd
+
+ Sun Jun 08 21:19:27 CDT 2014 - SE envia a obtener la firma
+
+ Sun Jun 08 21:19:27 CDT 2014 - Buscando la llave: llave
+
+ Sun Jun 08 21:19:27 CDT 2014 - Se firmó correctamente la petición
+
+ Sun Jun 08 21:19:27 CDT 2014 - Se obtuvo la firma correctamente con longitud de: 128
+
+ Sun Jun 08 21:19:27 CDT 2014 - Se guardo correcamente el archivo REQ

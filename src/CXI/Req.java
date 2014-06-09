@@ -9,6 +9,7 @@ import CryptoServerAPI.CryptoServer;
 import CryptoServerAPI.CryptoServerException;
 import CryptoServerAPI.CryptoServerUtil;
 import CryptoServerCXI.CryptoServerCXI;
+import Log.Log;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -64,6 +65,7 @@ public class Req {
     private  String SERIAL_NUMBER = " / GASM690101HDFRNN09";
     private  String ORGANISATION_NAME = "SERVICIO DE ADMINISTRACION TRIBUTARIA";
     private  int mech;
+    private Log log = new Log();
 
     
     public boolean ObtenerDatosDeConfiguracion()
@@ -73,7 +75,7 @@ public class Req {
             DocumentBuilder dBuilder ;
             Document doc ;
             String ruta2="";
-          
+            log.Write("Obteniendo los datos de confguracion");
             ruta2= System.getProperty("user.dir") +"/config.xml";
             
             dbFactory = DocumentBuilderFactory.newInstance();
@@ -84,6 +86,11 @@ public class Req {
             RFC_REP_SAT= (doc.getElementsByTagName("Configuracion").item(0).getAttributes().getNamedItem("rfcRepresentante").getNodeValue());
             SERIAL_NUMBER=(doc.getElementsByTagName("Configuracion").item(0).getAttributes().getNamedItem("curpRepresentante").getNodeValue());
             ORGANISATION_NAME= (doc.getElementsByTagName("Configuracion").item(0).getAttributes().getNamedItem("nombreSat").getNodeValue());
+            
+            log.Write(RFC_SAT);
+            log.Write(RFC_REP_SAT);
+            log.Write(SERIAL_NUMBER);
+            log.Write(ORGANISATION_NAME);
             return true;
         } catch (ParserConfigurationException ex) {
             Logger.getLogger(Req.class.getName()).log(Level.SEVERE, null, ex);
@@ -141,7 +148,7 @@ public class Req {
         RSAPublicKeySpec pKey2 = new RSAPublicKeySpec(pubKeyRSA.getModulus(), exponent);
         pub = keyFactory.generatePublic(pKey2);
 
-
+        log.Write("Ruta de salida: " + rutaSalida);
         File output = new File(rutaSalida);
         FileOutputStream fos = new FileOutputStream(output);
         ASN1OutputStream asno = new ASN1OutputStream(fos);
@@ -166,10 +173,12 @@ public class Req {
         DERSequence seqInfo = new DERSequence(vInfo);
 
         byte[] requestInfo = seqInfo.getEncoded();
-
+        log.Write("SE envia a obtener la firma");
         byte[] sig = cxi.ObtenerFirma(requestInfo,nombreLlave,grupo);
         if(sig == null)
-            mensaje="Ocurrio un error al generar la firma";
+            return "Ocurrio un error al generar la firma";
+        
+        log.Write("Se obtuvo la firma correctamente con longitud de: " + sig.length);
 
         DERSequence seqSigInfo = new DERSequence(new ASN1Encodable[]{PKCSObjectIdentifiers.sha1WithRSAEncryption, DERNull.INSTANCE});
         DERBitString signature = new DERBitString(sig);
@@ -177,9 +186,11 @@ public class Req {
 
         asno.writeObject(seq);
         fos.close();
+        log.Write("Se guardo correcamente el archivo REQ");
        }
        catch(Exception ee)
        {
+           log.Write("Ocrurió un error al generar el req" + ee.getMessage());
            mensaje="Ocurrio un error al generar el requerimiento";
        }
         
