@@ -14,6 +14,7 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
@@ -119,16 +120,19 @@ public class CXI {
         return "El dispositivo no esta CONECTADO, por favor, ingrese sus credenciales";
     }
 
-     public byte[] ObtenerFirma(byte[] data,String nombreLlave,String grupo) throws IOException, NumberFormatException, CryptoServerException {
+     public byte[] ObtenerFirma(byte[] data,Llaves llave) throws IOException, NumberFormatException, CryptoServerException {
         byte[] sign=null;
         Log log = new Log();
         try {
-            log.Write("Buscando la llave: " + nombreLlave);
-            KeyAttributes attr = new CryptoServerCXI.KeyAttributes();
-            if(!grupo.equals(""))
-                attr.setGroup(grupo);
-            attr.setName(nombreLlave);
-            CryptoServerCXI.Key rsaKey = cxi.findKey(attr);
+            log.Write("Buscando la llave: " + llave.getNombre());
+            CryptoServerCXI.Key rsaKey = llave.getLlave();
+//            if(!grupo.equals(""))
+//                attr.setGroup(grupo);
+//            if(! ocuparLabel)
+//                attr.setName(nombreLlave);
+//            else
+//                attr.setLabel(nombreLlave);
+//            CryptoServerCXI.Key rsaKey = cxi.findKey(attr);
             // hash data
             MessageDigest md = MessageDigest.getInstance("SHA-1", "SUN");
             md.update(data, 0, data.length);
@@ -145,14 +149,17 @@ public class CXI {
             return sign;
     }
 
-     public String ObtenerModulus(String nombreLlave,String grupo)
+     public String ObtenerModulus(Llaves llave)
     {     
         try {
-            KeyAttributes attr = new CryptoServerCXI.KeyAttributes();
-            if(!grupo.equals(""))
-                attr.setGroup(grupo);
-            attr.setName(nombreLlave);
-            CryptoServerCXI.Key rsaKey = cxi.findKey(attr);
+            CryptoServerCXI.Key rsaKey = llave.getLlave();
+//            if(!llave.getGrupo().equals(""))
+//                attr.setGroup(llave.getGrupo());
+//            if(llave.getNombre() != null)
+//                attr.setName(llave.getNombre());
+//            attr.setModulus(llave.getModulus());
+            
+            //CryptoServerCXI.Key rsaKey = cxi.findKey(attr);
             KeyAttributes attr2 =cxi.getKeyAttributes(rsaKey, true);
              StringBuilder sb = new StringBuilder();
              byte[] byteArray=attr2.getModulus();
@@ -188,9 +195,17 @@ public class CXI {
     /**
      * @return the lista
      */
-    public KeyAttributes[] getLista() {
+    public List<Llaves> getLista() {
         try {
-            return cxi.listKeys();
+            List<Llaves> llaves = new ArrayList<Llaves>();
+            CryptoServerCXI.KeyAttributes[] atributos=  cxi.listKeys();
+            for(int i=0 ; i< atributos.length; i++)
+            {
+                CryptoServerCXI.Key rsaKey = cxi.findKey(atributos[i]);
+                llaves.add(new Llaves(rsaKey,cxi));
+            }
+            
+            return llaves;
         } catch (IOException ex) {
             Logger.getLogger(CXI.class.getName()).log(Level.SEVERE, null, ex);
         } catch (CryptoServerException ex) {

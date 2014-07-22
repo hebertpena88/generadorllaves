@@ -123,7 +123,8 @@ public class Req {
             String nombreLlave,
             String grupo,
             String rutaSalida,
-            CXI cxi) throws Exception
+            CXI cxi,
+            Llaves llave) throws Exception
     {
         String mensaje="";
         String pubKey = null;
@@ -174,7 +175,7 @@ public class Req {
 
         byte[] requestInfo = seqInfo.getEncoded();
         log.Write("SE envia a obtener la firma");
-        byte[] sig = cxi.ObtenerFirma(requestInfo,nombreLlave,grupo);
+        byte[] sig = cxi.ObtenerFirma(requestInfo,llave);
         if(sig == null)
             return "Ocurrio un error al generar la firma";
         

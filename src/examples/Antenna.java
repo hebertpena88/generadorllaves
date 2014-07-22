@@ -31,14 +31,18 @@
 package examples;
 
 import CXI.CXI;
+import CXI.Llaves;
 import CXI.Req;
 import CryptoServerAPI.CryptoServerException;
 import CryptoServerCXI.CryptoServerCXI;
 import CryptoServerCXI.CryptoServerCXI.KeyAttributes;
 import java.awt.Color;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 
 public class Antenna extends javax.swing.JFrame {
@@ -87,6 +91,9 @@ public class Antenna extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         cmbLlave = new javax.swing.JComboBox();
         btnFile = new javax.swing.JButton();
+        txtLabel = new javax.swing.JTextField();
+        txtGrupoReq = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         panelEstatus = new java.awt.Panel();
         lblEstado = new javax.swing.JLabel();
@@ -264,25 +271,41 @@ public class Antenna extends javax.swing.JFrame {
             }
         });
 
+        txtLabel.setName("txtNombreLlave"); // NOI18N
+
+        txtGrupoReq.setName("txtNombreLlave"); // NOI18N
+
+        jLabel15.setText("Label/Grupo");
+
         org.jdesktop.layout.GroupLayout jPanel3Layout = new org.jdesktop.layout.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel3Layout.createSequentialGroup()
+                .add(89, 89, 89)
+                .add(btnGenerarReq)
+                .add(277, 277, 277))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jLabel13)
-                    .add(jLabel14)
                     .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                         .add(jPanel3Layout.createSequentialGroup()
                             .add(jLabel11)
                             .add(41, 41, 41))
-                        .add(org.jdesktop.layout.GroupLayout.TRAILING, jLabel12, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 65, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(org.jdesktop.layout.GroupLayout.TRAILING, jLabel12, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 65, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel15, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel14, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(cmbLlave, 0, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(txtRutaSalida)
+                .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                     .add(jPanel3Layout.createSequentialGroup()
+                        .add(txtLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 111, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(txtGrupoReq, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 111, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, cmbLlave, 0, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, txtRutaSalida)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanel3Layout.createSequentialGroup()
                         .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                             .add(txtRfc, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
                             .add(txtNoOficio))
@@ -290,10 +313,6 @@ public class Antenna extends javax.swing.JFrame {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(btnFile)
                 .add(157, 157, 157))
-            .add(jPanel3Layout.createSequentialGroup()
-                .add(89, 89, 89)
-                .add(btnGenerarReq)
-                .add(277, 277, 277))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -310,12 +329,17 @@ public class Antenna extends javax.swing.JFrame {
                 .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel14)
                     .add(cmbLlave, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(7, 7, 7)
+                .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(txtLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(txtGrupoReq, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel15))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(txtRutaSalida, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jLabel13)
                     .add(btnFile))
-                .add(40, 40, 40)
+                .add(18, 18, 18)
                 .add(btnGenerarReq)
                 .addContainerGap(13, Short.MAX_VALUE))
         );
@@ -383,15 +407,15 @@ public class Antenna extends javax.swing.JFrame {
             else
             {
                 JOptionPane.showMessageDialog(null,"La llave se generó correctamente");
-                KeyAttributes[] llaves= cxi.getLista();
-                if(llaves != null)
-                {
+                List<Llaves> keys= cxi.getLista();
+               
+                    
                     cmbLlave.removeAllItems();
-                    for(int i=0;i< llaves.length;i++)
+                    
+                    for(int i=0;i< keys.size() ; i++)
                     {
-                        cmbLlave.addItem(llaves[i].getName() + "-" +llaves[i].getGroup());
+                         cmbLlave.addItem(keys.get(i));
                     }
-                }
 //                txtNombreLlaveReq.setText(txtNombreLlave.getText());
 //                txtGrupoReq.setText(txtGrupo.getText());
             }
@@ -415,15 +439,17 @@ public class Antenna extends javax.swing.JFrame {
             if(mensaje.equals("")) {
                 panelEstatus.setBackground(Color.GREEN);
                 lblEstado.setText("CONECTADO");
-                KeyAttributes[] llaves= cxi.getLista();
-                if(llaves != null)
-                {
+                List<Llaves> keys= cxi.getLista();
+               
+                    
                     cmbLlave.removeAllItems();
-                    for(int i=0;i< llaves.length;i++)
+                    
+                    for(int i=0;i< keys.size() ; i++)
                     {
-                        cmbLlave.addItem(llaves[i].getName() + "-" +llaves[i].getGroup());
+                        cmbLlave.addItem(keys.get(i));
                     }
-                }
+                    
+                
                 
             } else {
                 JOptionPane.showMessageDialog(null,mensaje);
@@ -432,8 +458,14 @@ public class Antenna extends javax.swing.JFrame {
 
         } catch (NumberFormatException ex) {
             Logger.getLogger(Antenna.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (CryptoServerException ex) {
-            Logger.getLogger(Antenna.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,ex.getMessage());
+        } //catch (CryptoServerException ex) {
+//            Logger.getLogger(Antenna.class.getName()).log(Level.SEVERE, null, ex);
+//            JOptionPane.showMessageDialog(null,ex.getMessage());
+//        }
+        catch(Exception ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage());
         }
     }//GEN-LAST:event_btnConectarActionPerformed
 
@@ -454,10 +486,29 @@ public class Antenna extends javax.swing.JFrame {
                 String llave="";
                 String grupo="";
                 String[] resultado =cmbLlave.getSelectedItem().toString().split("-");
-                llave=resultado[0];
-                grupo= resultado[1];
+                Llaves llaves = (Llaves) cmbLlave.getSelectedItem();
+                boolean ocuparLabel=false;
+                if(resultado.length ==2)
+                {
+                    llave=resultado[0];
+                    grupo= resultado[1];
+                }
+                else
+                {
+                    ocuparLabel=true;
+                    llave=resultado[1];
+                    grupo= resultado[2];
+                }
+                
+                 if(! txtLabel.getText().equals(""))
+                 {
+                     llave = txtLabel.getText();
+                     grupo = txtGrupoReq.getText();
+                             
+                     ocuparLabel=true;
+                 }
 
-                String modulus = cxi.ObtenerModulus(llave,grupo);
+                String modulus = cxi.ObtenerModulus(llaves);
                 if(! modulus.equals(""))
                 {
                     modulus= modulus.toUpperCase();
@@ -470,7 +521,8 @@ public class Antenna extends javax.swing.JFrame {
                         llave,
                         grupo,
                         txtRutaSalida.getText(),
-                        cxi);
+                        cxi,
+                        llaves);
                     if(! mensaje.equals(""))
                     JOptionPane.showMessageDialog(null,mensaje);
                     else
@@ -514,6 +566,7 @@ public class Antenna extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -529,7 +582,9 @@ public class Antenna extends javax.swing.JFrame {
     private javax.swing.JLabel lblEstado;
     private java.awt.Panel panelEstatus;
     private javax.swing.JTextField txtGrupo;
+    private javax.swing.JTextField txtGrupoReq;
     private javax.swing.JTextField txtIp;
+    private javax.swing.JTextField txtLabel;
     private javax.swing.JTextField txtNoOficio;
     private javax.swing.JTextField txtNombreLlave;
     private javax.swing.JPasswordField txtPassword;

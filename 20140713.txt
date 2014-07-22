@@ -1,0 +1,117 @@
+
+
+ Sun Jul 13 22:07:29 CDT 2014 - Obteniendo los datos de confguracion
+
+ Sun Jul 13 22:07:29 CDT 2014 - SAT970701NN3
+
+ Sun Jul 13 22:07:29 CDT 2014 - GASM690101H29
+
+ Sun Jul 13 22:07:29 CDT 2014 - GASM690101HDFRNN09
+
+ Sun Jul 13 22:07:29 CDT 2014 - SERVICIO DE ADMINISTRACION TRIBUTARIA
+
+ Sun Jul 13 22:07:30 CDT 2014 - Ruta de salida: C:\Users\Admin\Documents\req.req
+
+ Sun Jul 13 22:07:30 CDT 2014 - SE envia a obtener la firma
+
+ Sun Jul 13 22:07:30 CDT 2014 - Buscando la llave: null
+
+ Sun Jul 13 22:07:30 CDT 2014 - Se firmó correctamente la petición
+
+ Sun Jul 13 22:07:30 CDT 2014 - Se obtuvo la firma correctamente con longitud de: 128
+
+ Sun Jul 13 22:07:30 CDT 2014 - Se guardo correcamente el archivo REQ
+
+ Sun Jul 13 22:15:56 CDT 2014 - Mensaje de prueba
+
+ Sun Jul 13 22:20:51 CDT 2014 - Obteniendo los datos de confguracion
+
+ Sun Jul 13 22:20:51 CDT 2014 - SAT970701NN3
+
+ Sun Jul 13 22:20:51 CDT 2014 - GASM690101H29
+
+ Sun Jul 13 22:20:51 CDT 2014 - GASM690101HDFRNN09
+
+ Sun Jul 13 22:20:51 CDT 2014 - SERVICIO DE ADMINISTRACION TRIBUTARIA
+
+ Sun Jul 13 22:20:51 CDT 2014 - Ruta de salida: C:\Users\Admin\Documents\digibox.req
+
+ Sun Jul 13 22:20:51 CDT 2014 - SE envia a obtener la firma
+
+ Sun Jul 13 22:20:51 CDT 2014 - Buscando la llave: null
+
+ Sun Jul 13 22:20:51 CDT 2014 - Se firmó correctamente la petición
+
+ Sun Jul 13 22:20:51 CDT 2014 - Se obtuvo la firma correctamente con longitud de: 128
+
+ Sun Jul 13 22:20:52 CDT 2014 - Se guardo correcamente el archivo REQ
+
+ Sun Jul 13 22:30:43 CDT 2014 - Mensaje de prueba
+
+ Sun Jul 13 22:31:05 CDT 2014 - Obteniendo los datos de confguracion
+
+ Sun Jul 13 22:31:05 CDT 2014 - SAT970701NN3
+
+ Sun Jul 13 22:31:05 CDT 2014 - GASM690101H29
+
+ Sun Jul 13 22:31:05 CDT 2014 - GASM690101HDFRNN09
+
+ Sun Jul 13 22:31:05 CDT 2014 - SERVICIO DE ADMINISTRACION TRIBUTARIA
+
+ Sun Jul 13 22:31:05 CDT 2014 - Ruta de salida: C:\Users\Admin\Documents\digibox.req
+
+ Sun Jul 13 22:31:05 CDT 2014 - SE envia a obtener la firma
+
+ Sun Jul 13 22:31:05 CDT 2014 - Buscando la llave: null
+
+ Sun Jul 13 22:31:05 CDT 2014 - Se firmó correctamente la petición
+
+ Sun Jul 13 22:31:05 CDT 2014 - Se obtuvo la firma correctamente con longitud de: 128
+
+ Sun Jul 13 22:31:05 CDT 2014 - Se guardo correcamente el archivo REQ
+
+ Sun Jul 13 22:51:02 CDT 2014 - Mensaje de prueba
+
+ Sun Jul 13 22:51:12 CDT 2014 - Obteniendo los datos de confguracion
+
+ Sun Jul 13 22:51:12 CDT 2014 - SAT970701NN3
+
+ Sun Jul 13 22:51:12 CDT 2014 - GASM690101H29
+
+ Sun Jul 13 22:51:12 CDT 2014 - GASM690101HDFRNN09
+
+ Sun Jul 13 22:51:12 CDT 2014 - SERVICIO DE ADMINISTRACION TRIBUTARIA
+
+ Sun Jul 13 22:51:12 CDT 2014 - Ruta de salida: C:\Users\Admin\Documents\digibox.req
+
+ Sun Jul 13 22:51:12 CDT 2014 - SE envia a obtener la firma
+
+ Sun Jul 13 22:51:12 CDT 2014 - Buscando la llave: null
+
+ Sun Jul 13 22:51:13 CDT 2014 - Se firmó correctamente la petición
+
+ Sun Jul 13 22:51:13 CDT 2014 - Se obtuvo la firma correctamente con longitud de: 128
+
+ Sun Jul 13 22:51:13 CDT 2014 - Se guardo correcamente el archivo REQ
+
+ Sun Jul 13 22:53:00 CDT 2014 - Obteniendo los datos de confguracion
+
+ Sun Jul 13 22:53:00 CDT 2014 - SAT970701NN3
+
+ Sun Jul 13 22:53:00 CDT 2014 - GATF730321GG5
+
+ Sun Jul 13 22:53:00 CDT 2014 - GATF730321HJCRRR01
+
+ Sun Jul 13 22:53:00 CDT 2014 - SERVICIO DE ADMINISTRACION TRIBUTARIA
+
+ Sun Jul 13 22:53:00 CDT 2014 - Ruta de salida: C:\Users\Admin\Documents\digibox.req
+
+ Sun Jul 13 22:53:00 CDT 2014 - SE envia a obtener la firma
+
+ Sun Jul 13 22:53:00 CDT 2014 - Buscando la llave: null
+
+ Sun Jul 13 22:53:00 CDT 2014 - Se firmó correctamente la petición
+
+ Sun Jul 13 22:53:00 CDT 2014 - Se obtuvo la firma correctamente con longitud de: 128
+
+ Sun Jul 13 22:53:00 CDT 2014 - Se guardo correcamente el archivo REQ

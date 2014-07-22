@@ -1,0 +1,47 @@
+
+
+ Tue Jul 15 14:25:55 CDT 2014 - Mensaje de prueba
+
+ Tue Jul 15 14:27:12 CDT 2014 - Obteniendo los datos de confguracion
+
+ Tue Jul 15 14:27:12 CDT 2014 - SAT970701NN3
+
+ Tue Jul 15 14:27:12 CDT 2014 - GASM690101H29
+
+ Tue Jul 15 14:27:12 CDT 2014 - GASM690101HDFRNN09
+
+ Tue Jul 15 14:27:12 CDT 2014 - SERVICIO DE ADMINISTRACION TRIBUTARIA
+
+ Tue Jul 15 14:27:12 CDT 2014 - Ruta de salida: C:\Users\Admin\Documents\digi2.req
+
+ Tue Jul 15 14:27:13 CDT 2014 - SE envia a obtener la firma
+
+ Tue Jul 15 14:27:13 CDT 2014 - Buscando la llave: null
+
+ Tue Jul 15 14:27:13 CDT 2014 - Se firmó correctamente la petición
+
+ Tue Jul 15 14:27:13 CDT 2014 - Se obtuvo la firma correctamente con longitud de: 128
+
+ Tue Jul 15 14:27:13 CDT 2014 - Se guardo correcamente el archivo REQ
+
+ Tue Jul 15 14:31:36 CDT 2014 - Obteniendo los datos de confguracion
+
+ Tue Jul 15 14:31:36 CDT 2014 - SAT970701NN3
+
+ Tue Jul 15 14:31:36 CDT 2014 - GASM690101H29
+
+ Tue Jul 15 14:31:36 CDT 2014 - GASM690101HDFRNN09
+
+ Tue Jul 15 14:31:36 CDT 2014 - SERVICIO DE ADMINISTRACION TRIBUTARIA
+
+ Tue Jul 15 14:31:36 CDT 2014 - Ruta de salida: C:\Users\Admin\Documents\digi2.req
+
+ Tue Jul 15 14:31:36 CDT 2014 - SE envia a obtener la firma
+
+ Tue Jul 15 14:31:36 CDT 2014 - Buscando la llave: null
+
+ Tue Jul 15 14:31:37 CDT 2014 - Se firmó correctamente la petición
+
+ Tue Jul 15 14:31:37 CDT 2014 - Se obtuvo la firma correctamente con longitud de: 128
+
+ Tue Jul 15 14:31:37 CDT 2014 - Se guardo correcamente el archivo REQ
